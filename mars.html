@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		화성 매매하기
+	</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+	body{margin: 0; background-color: black;background-image: url(bg.png);}
+	.container{width: 140vh; height: 90vh; display:flex; position: relative;}
+	.img{top: 5vh; left: 36vh; position: relative;}
+	.mars{height: 70vh; position: relative; position: absolute; left: 38vh;}
+	.text{position: relative; left: 59vh; top: 57.5vh; width: 12vh; height:8vh;}
+	.button{height: 15vh; position:relative; position: absolute; top: 75vh; left: 44vh;}
+	
+	
+	
+</style>
+</head>
+<body>
+<div class="container">	
+	<div class="img" id="wrap" >
+<div class= "but" id="capture" onclick="takeScreenShot()">
+	<img src="button-02.png" class="button">
+			</div>
+
+	<img src="end_2.png" class="mars">
+	<div class="text">
+	<input type="text" placeholder="이름을 입력하세요." maxlength="10" style="width: 12vh; height:3vh; margin-top: 2vh; border: none; z-index: -10 ;  font-size: 0.6vw; font-family: 300;">
+</div>
+</div>
+		
+		</div>
+</body>
+
+<script type="text/javascript">
+
+	
+
+		var takeScreenShot = function() {
+		html2canvas(document.getElementById("wrap"), {
+		onrendered: function (canvas) {
+		var tempcanvas=document.createElement('canvas');
+		tempcanvas.width=210;
+		tempcanvas.height=297;
+		var context=tempcanvas.getContext('2d');
+		context.drawImage(canvas,0,0,1920,980,0,0,1920,980);
+		var link=document.createElement("a");
+		link.href=tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+		link.download = 'end_2.jpg';
+		link.click();
+		}
+		});
+		}
+
+</script>
+
+
+</html>

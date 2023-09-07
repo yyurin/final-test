@@ -1,0 +1,26 @@
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="html2canvas.js"></script>
+
+<button id="save_image_locally">download img</button>
+
+   <div id="imagesave">
+      <img id='local_image' src='img1.jpg'>
+   </div>
+
+<script>
+
+    $('#save_image_locally').click(function(){
+
+            html2canvas($('#imagesave'), 
+             {
+                onrendered: function (canvas) {
+                    var img = canvas.toDataURL("image/png");
+                    alert('This will currently open image in a new window called "data:". Instead I want to save to users local computer. Ideally as a jpg instead of png.');
+                    window.open(img);
+                }
+             });
+            });
+
+</script>

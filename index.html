@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+	<title>
+	우주 부동산	
+	</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+ <script  src="./script.js"></script>
+
+
+	<style type="text/css">
+	body{margin: 0; background-color: black;background-image: url(bg.png);}
+.container{width: 840vh; display:flex; position: relative; overflow: hidden;}
+
+.box{height: 100vh; border-right: 1px solid white;}
+.box3{width: 190vh; height: 100vh;}
+
+
+/*gif 스타일*/
+.box1{width: 6vw;}
+.gif{background: url(scroll.png); z-index: 99; position: fixed; left: 0;
+		      background-size: 6vw auto; animation:gif 2.22s infinite linear;}
+			@keyframes gif{
+				from{background-position:0 0;} 
+				to{background-position: 0 97vh;}}
+
+/* 탑 박스 스타일*/
+.topbox{height: 7vh; border-bottom: 1px solid white; display: flex; position: relative;}
+#star{width: 3.5vh; height: auto; position: absolute; right: 5vh; top: 2vh;}
+
+/*중간 박스 스타일 */
+.box2{ height: 100vh; padding-left: 5.5vw;}
+.middlebox{height: 70vh;border-bottom: 1px solid white; display: flex; position: relative;}
+.smallbox{width: 110vh; height: 70vh; border-right:1px solid white;}
+.image {height:70vh; width: 85vh; border-right:1px solid white; position: relative;}
+
+	/*유로파*/
+	.smallbox1{width: 65vh; height: 70vh; border-right:1px solid white;}
+	.smallbox2{width: 95vh; height: 70vh; border-right:1px solid white;}
+	.smallbox3{width: 50vh; height: 70vh; border-right:1px solid white;}
+		#poster1{width: 50vh; position: relative; left: 1vh;}
+
+
+		#imgWrap {width: 65vh; height: 70vh; transform-style: preserve-3d; perspective: 1000; cursor: pointer; left: 0;} 
+		.face {top: 0; left: 0; width: 100%; height: 100%; color: white; line-height: 200px; text-align: center; backface-visibility: hidden; transition: all 1s;} 
+		.front {position: relative; background: none; z-index: 2; opacity: 1; transform: rotateY(0deg);} 
+		.back {position: absolute; background: none; z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap:hover > .front {z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap:hover > .back {z-index: 2; opacity: 1; transform: rotateY(0)}
+
+
+		.newstext1{color: white; font-family:300; font-size: 0.95vw; line-height: 1.7vw;
+					position: relative; left:2vh; top: 5vh;}
+		.highlight.two-highlight {
+			background: -webkit-linear-gradient(left, #fe88ff 0%, #c2a4ff 100%);
+			background: -o-linear-gradient(left, #fe88ff 0%, #c2a4ff 100%);
+			background: linear-gradient(to right, #fe88ff 0%, #c2a4ff 100%); 
+			}
+			/*유로파 광고 팝업*/
+	.ad1{height: 70vh; position: relative;}
+
+				#warning1{position: absolute; width: 30vh;
+			    			top: 20vh; left: -2vh; z-index: 4;
+			    animation: warning1 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning1 {from{top: 8vh;} to{top: -5vh;}}
+		
+				#warning2{position: absolute; width: 40vh;
+			    			top: 60vh; left: -5vh; z-index: 6;
+			    animation: warning2 3.8s ease-in-out infinite alternate;}
+			    @keyframes warning2 {from{top: 55vh;} to{top: 40vh;}}
+
+			    #warning3{position: absolute; width: 30vh;
+			    			top: 15vh; left: -7vh; z-index: 3;
+			    animation: warning3 2.9s ease-in-out infinite alternate;}
+			    @keyframes warning3 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #warning4{position:absolute; width: 35vh;
+			    			top: 50vh; left: 18vh; z-index: 4;
+			    animation: warning4 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning4 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #warning5{ position:absolute; width: 15vh;
+			    			top:30vh; left: 40vh; z-index: 5;
+			    animation: warning5 2.8s ease-in-out infinite alternate;}
+			    @keyframes warning5 {from{top: 30vh;} to{top: 5vh;}}
+
+			    #warning6{ position:absolute; width: 20vh;
+			    			top:30vh; left: -18vh; z-index: 7;
+			    animation: warning6 2.7s ease-in-out infinite alternate;}
+			    @keyframes warning6 {from{top: 60vh;} to{top: 40vh;}}
+
+
+	/*화성*/
+	.bsmallbox1{width: 65vh; height: 70vh; border-right:1px solid white;}
+	.bsmallbox2{width: 95vh; height: 70vh; border-right:1px solid white;}
+	.bsmallbox3{width: 50vh; height: 70vh; border-right:1px solid white;}
+		#poster2{width: 50vh; position: relative; left: 1vh;}
+
+		#imgWrap2 {width: 65vh; height: 70vh; transform-style: preserve-3d; perspective: 1000; cursor: pointer; left: 0;} 
+		.face2 {top: 0; left: 0; width: 100%; height: 100%; color: white; line-height: 200px; text-align: center; backface-visibility: hidden; transition: all 1s;} 
+		.front2 {position: relative; background: none; z-index: 2; opacity: 1; transform: rotateY(0deg);} 
+		.back2 {position: absolute; background: none; z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap2:hover > .front2 {z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap2:hover > .back2 {z-index: 2; opacity: 1; transform: rotateY(0)}
+
+		.newstext2{color: white; font-family:300; font-size: 0.95vw; line-height: 1.7vw;
+					position: relative; left:2vh; top: 5vh;}
+	    .highlight.two-highlight2 {
+			background: -webkit-linear-gradient(left, #f2ea88 0%, #6de281 100%);
+			background: -o-linear-gradient(left, #f2ea88 0%, #6de281 100%);
+			background: linear-gradient(to right, #f2ea88 0%, #6de281 100%); 
+			}
+				/*화성 광고 팝업*/
+	.ad2{height: 70vh; position: relative;}
+
+				#bwarning1{position: absolute; width: 30vh;
+			    			top: 20vh; left: -2vh; z-index: 4;
+			    animation: warning1 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning1 {from{top: 15vh;} to{top: 0vh;}}
+		
+				#bwarning2{position: absolute; width: 40vh;
+			    			top: 60vh; left: -5vh; z-index: 6;
+			    animation: warning2 3.8s ease-in-out infinite alternate;}
+			    @keyframes warning2 {from{top: 55vh;} to{top: 40vh;}}
+
+			    #bwarning3{position: absolute; width: 30vh;
+			    			top: 15vh; left: -7vh; z-index: 3;
+			    animation: warning3 2.9s ease-in-out infinite alternate;}
+			    @keyframes warning3 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #bwarning4{position:absolute; width: 35vh;
+			    			top: 50vh; left: 18vh; z-index: 4;
+			    animation: warning4 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning4 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #bwarning5{ position:absolute; width: 15vh;
+			    			top:30vh; left: 40vh; z-index: 5;
+			    animation: warning5 2.8s ease-in-out infinite alternate;}
+			    @keyframes warning5 {from{top: 30vh;} to{top: 5vh;}}
+
+			    #bwarning6{ position:absolute; width: 20vh;
+			    			top:30vh; left: -18vh; z-index: 7;
+			    animation: warning6 2.7s ease-in-out infinite alternate;}
+			    @keyframes warning6 {from{top: 60vh;} to{top: 40vh;}}
+
+	/*세리스*/
+	.csmallbox1{width: 65vh; height: 70vh; border-right:1px solid white;}
+	.csmallbox2{width: 95vh; height: 70vh; border-right:1px solid white;}
+	.csmallbox3{width: 50vh; height: 70vh; border-right:1px solid white;}
+		#poster3{width: 50vh; position: relative; left: 1vh;}
+		.newstext3{color: white; font-family:300; font-size: 0.95vw; line-height: 1.7vw;
+					position: relative; left:2vh; top: 5vh;}
+
+		#imgWrap3 {width: 65vh; height: 70vh; transform-style: preserve-3d; perspective: 1000; cursor: pointer; left: 0;} 
+		.face3 {top: 0; left: 0; width: 100%; height: 100%; color: white; line-height: 200px; text-align: center; backface-visibility: hidden; transition: all 1s;} 
+		.front3 {position: relative; background: none; z-index: 2; opacity: 1; transform: rotateY(0deg);} 
+		.back3 {position: absolute; background: none; z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap3:hover > .front3 {z-index: 1; opacity: 0; transform: rotateY(180deg);} 
+		#imgWrap3:hover > .back3 {z-index: 2; opacity: 1; transform: rotateY(0)}
+
+	    .highlight.two-highlight3 {
+			background: -webkit-linear-gradient(left, #f2ea88 0%, #67def9 100%);
+			background: -o-linear-gradient(left, #f2ea88 0%, #67def9 100%);
+			background: linear-gradient(to right, #f2ea88 0%, #67def9 100%); 
+			}
+				/*세리스 광고 팝업*/
+	.ad2{height: 70vh; position: relative;}
+
+				#cwarning1{position: absolute; width: 30vh;
+			    			top: 20vh; left: -2vh; z-index: 4;
+			    animation: warning1 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning1 {from{top: 15vh;} to{top: 0vh;}}
+		
+				#cwarning2{position: absolute; width: 40vh;
+			    			top: 60vh; left: -5vh; z-index: 6;
+			    animation: warning2 3.8s ease-in-out infinite alternate;}
+			    @keyframes warning2 {from{top: 55vh;} to{top: 40vh;}}
+
+			    #cwarning3{position: absolute; width: 30vh;
+			    			top: 15vh; left: -7vh; z-index: 3;
+			    animation: warning3 2.9s ease-in-out infinite alternate;}
+			    @keyframes warning3 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #cwarning4{position:absolute; width: 35vh;
+			    			top: 50vh; left: 18vh; z-index: 4;
+			    animation: warning4 3.3s ease-in-out infinite alternate;}
+			    @keyframes warning4 {from{top: 28vh;} to{top: 10vh;}}
+
+			    #cwarning5{ position:absolute; width: 15vh;
+			    			top:30vh; left: 40vh; z-index: 5;
+			    animation: warning5 2.8s ease-in-out infinite alternate;}
+			    @keyframes warning5 {from{top: 30vh;} to{top: 5vh;}}
+
+			    #cwarning6{ position:absolute; width: 20vh;
+			    			top:30vh; left: -18vh; z-index: 7;
+			    animation: warning6 2.7s ease-in-out infinite alternate;}
+			    @keyframes warning6 {from{top: 60vh;} to{top: 40vh;}}
+
+
+
+
+.text{color: white; font-family:300; font-size: 1.3vw; line-height: 1.9vw; position: absolute;left: 7vh; top: 5vh;}
+#img{width: 55vh;}
+.image {height:70vh; width: 85vh; border-right:1px solid white; position: relative;}
+
+		#planet1{position:relative; top: 3vh; left:4vh; width:30vh; 
+        		transform: scale(1); rotate: 28deg
+  				-webkit-transform: scale(1);
+  				-moz-transform: scale(1);
+  				-ms-transform: scale(1);
+  				-o-transform: scale(1);
+  				transition: all 0.3s ease-in-out;}
+   
+		#planet1:hover {transform: scale(1.2);
+  						-webkit-transform: scale(1.2);
+  						-moz-transform: scale(1.2);
+ 						 -ms-transform: scale(1.2);
+ 						 -o-transform: scale(1.2);}
+
+ 		#planet2{position: relative; top: -3vh; left:-3vh; width:20vh; 
+        		transform: scale(1); rotate: 28deg
+  				-webkit-transform: scale(1);
+  				-moz-transform: scale(1);
+  				-ms-transform: scale(1);
+  				-o-transform: scale(1);
+  				transition: all 0.3s ease-in-out;}
+
+  		#planet2:hover {transform: scale(1.2);
+  						-webkit-transform: scale(1.2);
+  						-moz-transform: scale(1.2);
+ 						 -ms-transform: scale(1.2);
+ 						 -o-transform: scale(1.2);}
+
+ 		#planet3{position: relative; top: -2vh; left:0vh; width:28vh; 
+        		transform: scale(1); rotate: 28deg
+  				-webkit-transform: scale(1);
+  				-moz-transform: scale(1);
+  				-ms-transform: scale(1); 
+  				-o-transform: scale(1);
+  				transition: all 0.3s ease-in-out;}
+
+  		#planet3:hover {transform: scale(1.2);
+  						-webkit-transform: scale(1.2);
+  						-moz-transform: scale(1.2);
+ 						 -ms-transform: scale(1.2);
+ 						 -o-transform: scale(1.2);}
+ 		#planet4{position: relative; top: -34vh; left:15vh; width:24vh; 
+        		transform: scale(1); rotate: 28deg
+  				-webkit-transform: scale(1);
+  				-moz-transform: scale(1);
+  				-ms-transform: scale(1);
+  				-o-transform: scale(1);
+  				transition: all 0.3s ease-in-out;}
+
+  		#planet4:hover {transform: scale(1.2);
+  						-webkit-transform: scale(1.2);
+  						-moz-transform: scale(1.2);
+ 						 -ms-transform: scale(1.2);
+ 						 -o-transform: scale(1.2);}
+
+ 		#planet5{position: relative; top: -27vh; left:14vh; width:43vh; 
+        		transform: scale(1); rotate: 28deg
+  				-webkit-transform: scale(1);
+  				-moz-transform: scale(1);
+  				-ms-transform: scale(1);
+  				-o-transform: scale(1);
+  				transition: all 0.3s ease-in-out;}
+
+  		#planet5:hover {transform: scale(1.2);
+  						-webkit-transform: scale(1.2);
+  						-moz-transform: scale(1.2);
+ 						 -ms-transform: scale(1.2);
+ 						 -o-transform: scale(1.2);}
+
+
+
+
+/*바텀박스 스타일 */
+			.bottombox{height: 15vh;border-bottom: 1px solid white; display: flex; position: relative;}
+
+		/*메인 페이지 하단*/
+		.bottom1{width: 110vh; height: 15vh; position: relative;}
+		.bottom11{width: 85vh; height: 15vh; position: relative;}
+
+		/*악세사리 스타일*/
+ 	#bottom{ width: 13vh; height: auto; position: relative; left:2vw; top:2vh;
+ 	        animation: bottom 1s linear infinite;
+    				transform-origin: 50% 50%;}
+ 	         
+ 	         @keyframes bottom {
+				0%{transform:rotateY(0deg);}
+				100%{transform:rotateY(180deg);}
+			}
+
+ 	#bottom2 {width: 20vh; position: relative; left: 20vh; height: auto; top:2vh;
+ 				animation: bottom 1.4s linear infinite;
+    				transform-origin: 50% 50%;}
+
+ 	         @keyframes bottom {
+				0%{transform:rotateY(0deg);}
+				100%{transform:rotateY(180deg);}
+			}
+
+
+ 	#bottom3{position: relative; width: 5vh; height: auto; left: 30vh; top:2vh;
+ 			animation: bottom 1.4s linear infinite;
+    				transform-origin: 50% 50%;}
+
+    		@keyframes bottom {
+				0%{transform:rotateY(0deg);}
+				100%{transform:rotateY(180deg);}
+			}
+
+ 	#bottom4{ width: 16vh; height: auto; position: relative; left :40vh; top:0vh;
+ 			animation: bottom 1.4s linear infinite;
+    				transform-origin: 50% 50%;}
+
+    		@keyframes bottom {
+				0%{transform:rotateY(0deg);}
+				100%{transform:rotateY(180deg);}
+			}
+
+ 	.footer{color: gray; font-family:200; font-size: 0.8em; line-height: 1.3; position: absolute; right: 3vh; top: 94.2vh;}
+
+	/*유로파 */
+ 	.bottom2{width:65vh; display: flex; position: relative;}
+ 	.bottom22{width:95vh; display: flex; position: relative;}
+ 	.bottom222{width:50vh; display: flex; position: relative;}
+ 	
+ 	
+
+ 	#butt1{height: 15vh; position: relative; left: 15vh;  top: 0;}
+ 	#tag1{height: 12vh; position: relative; left: 2vh;  top: 1.2vh;}
+ 	#europa{width: 60vh;  position: relative; left: -18vh;  top: 0; opacity: 0; z-index: 50;}
+
+ 	.hash1{border-style: solid; border-width: 0.4px; border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7;text-align: center;}
+    	.hash1::before {content: "공급 유형";
+    					color: white; font-weight: 400; font-size: 1.2vw; padding-top: 0.2vw; text-align: center;}
+    	.hash1:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%); border-style: none;}
+    	.hash1:hover::before { content: "매매";}
+
+    .hash2{border-style: solid; border-width: 0.4px; border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash2::before {content: "입주 예정일";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash2:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%); border-style: none;}
+    	.hash2:hover::before { content: "2043.11.1";}
+
+    .hash3{border-style: solid;border-width: 0.4px; border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash3::before {content: "시공사";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash3:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%); border-style: none;}
+    	.hash3:hover::before { content: "우리 중공업";}
+
+    .hash4{border-style: solid;border-width: 0.4px; border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash4::before {content: "표면적";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash4:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%);center; border-style: none;}
+    	.hash4:hover::before { content: "3,090만 km2";}
+
+    .hash5{border-style: solid;border-width: 0.4px; border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+		.hash5::before {content: "중력";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash5:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%);center; border-style: none;}
+    	.hash5:hover::before { content: "1.314 m/s";}
+
+    .hash6{border-style: solid;border-width: 0.4px;border-color: #bc12f9;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash6::before {content: "공전 주기";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.hash6:hover{animation-play-state: paused; background: linear-gradient(to right, #c2a4ff 0%, #fe88ff 100%); center; border-style: none;}
+    	.hash6:hover::before { content: "3.551 18 일";}
+
+ 
+
+	/*화성 */
+	.bottom3{width:65vh; display: flex; position: relative;}
+ 	.bottom33{width:95vh; display: flex; position: relative;}
+ 	.bottom333{width:50vh; display: flex; position: relative;}
+
+	#butt2{height: 15vh; position: relative; left: 15vh;  top: 0;}
+ 	#tag2{height: 12vh; position: relative; left: 2vh;  top: 1.2vh;}
+ 	#mars{width: 60vh;  position: relative; left: -18vh;  top: 0; opacity: 0; z-index: 50;}
+
+ 	.bhash1{border-style: solid; border-width: 0.4px; border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 2vh; margin:0;
+    	   word-break: keep-all; font-size: 1.3vw; line-height: 1.7; text-align: center;}
+    	.bhash1::before {content: "공급 유형";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash1:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%); border-style: none;}
+    	.bhash1:hover::before { content: "전세";}
+
+    .bhash2{border-style: solid; border-width: 0.4px; border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 200; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash2::before {content: "입주 예정일";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash2:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%); border-style: none;}
+    	.bhash2:hover::before { content: "2050.1.1";}
+
+    .bhash3{border-style: solid;border-width: 0.4px; border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash3::before {content: "시공사";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash3:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%); border-style: none;}
+    	.bhash3:hover::before { content: "우주 시공사";}
+
+    .bhash4{border-style: solid;border-width: 0.4px; border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash4::before {content: "평균 밀도";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash4:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%);center; border-style: none;}
+    	.bhash4:hover::before { content: "3.93g/cm³";}
+
+    .bhash5{border-style: solid;border-width: 0.4px; border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+		.bhash5::before {content: "하루주기";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash5:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%);center; border-style: none;}
+    	.bhash5:hover::before { content: "1일 37분";}
+
+    .bhash6{border-style: solid;border-width: 0.4px;border-color: #45e063;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash6::before {content: "공전 주기";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.bhash6:hover{animation-play-state: paused; background: linear-gradient(to right, #6de281 0%, #f2ea88 100%); center; border-style: none;}
+    	.bhash6:hover::before { content: "687일";}
+
+
+    	/*세리스*/
+    	.bottom4{width:65vh; display: flex; position: relative;}
+ 		.bottom44{width:95vh; display: flex; position: relative;}
+ 		.bottom444{width:50vh; display: flex; position: relative;}	
+
+ 	#butt3{height: 15vh; position: relative; left: 15vh;  top: 0;}
+ 	#tag3{height: 12vh; position: relative; left: 2vh;  top: 1.2vh;}
+ 	#ceres{width: 60vh;  position: relative; left: -18vh;  top: 0; opacity: 0; z-index: 50;}
+
+ 	.chash1{border-style: solid; border-width: 0.4px; border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 2vh; margin:0;
+    	   word-break: keep-all; font-size: 1.3vw; line-height: 1.7; text-align: center;}
+    	.chash1::before {content: "공급 유형";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash1:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%); border-style: none;}
+    	.chash1:hover::before { content: "월세";}
+
+    .chash2{border-style: solid; border-width: 0.4px; border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 200; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash2::before {content: "입주 예정일";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash2:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%); border-style: none;}
+    	.chash2:hover::before { content: "미정";}
+
+    .chash3{border-style: solid;border-width: 0.4px; border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 2vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash3::before {content: "시공일";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash3:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%); border-style: none;}
+    	.chash3:hover::before { content: "2030.05.05";}
+
+    .chash4{border-style: solid;border-width: 0.4px; border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 35vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash4::before {content: "평균 반지름";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash4:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%);center; border-style: none;}
+    	.chash4:hover::before { content: "473km";}
+
+    .chash5{border-style: solid;border-width: 0.4px; border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 55vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+		.chash5::before {content: "중력";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash5:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%);center; border-style: none;}
+    	.chash5:hover::before { content: "0.27m/s²";}
+
+    .chash6{border-style: solid;border-width: 0.4px;border-color: #2fccf7;
+ 		   width: 15vh; height: 4.5vh; border-radius: 60px; position:absolute; left: 75vh; top: 8vh; margin:0;
+    	   word-break: keep-all; color: white; font-weight: 500; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash6::before {content: "평균 밀도";
+    					color: white; font-weight: 400; font-size: 1.2vw; line-height: 1.7; text-align: center;}
+    	.chash6:hover{animation-play-state: paused; background: linear-gradient(to right, #67def9 0%, #f2ea88 100%); center; border-style: none;}
+    	.chash6:hover::before { content: "2.08g/cm³";}
+
+
+	</style>
+</head>
+<body>
+<div class="box box1 gif">
+</div>
+<div class="container">
+
+<div class="box box2">
+	<div class="topbox">
+		<img src="star.png" id="star">
+	</div>
+	
+
+	<div class="middlebox" >
+		<div class="smallbox">
+		<div class="text">
+		<img src="tittle.png" id="img"> 
+			<br><br><br><br><br><br><br>	우주 부동산은 하루가 다르게 치솟는 대한민국 집 값에, 차라리 <br>우주에 집을 사는게 빠르겠다 싶은 여러분들을 위한 집을 제공합니다. <br>가장 멀지만 대한민국보다는 가까울 집을 만나보세요.
+			<br><br>
+			Space real estate provides a house for those who think it would be <br>
+			faster to buy a house in space at the soaring price of Korean homes <br>
+			every day. Meet a house that is farthest but closer than Korea.</div></div>
+
+					<div class=image>
+					<img src="poster1.png" id=planet1>
+					<img src="poster2.png" id=planet2>
+					<img src="poster3.png" id=planet3>
+					<img src="poster4.png" id=planet4>
+					<img src="poster5.png" id=planet5>
+
+				</div>
+				
+
+				<div class="smallbox1">
+					<div id="imgWrap">
+							<div class="face front"><img src="poster1.png" id="poster1"></div> 
+							<div class="face back"><img src="back.png" id="poster1"></div> 
+						</div></div>
+							
+						<div class="smallbox2">
+							<div class="newstext1">
+
+							<br>
+
+							<span class="highlight two-highlight">우주건설산업연구원(건산연)과 신용평가기관 유니버스크레딧뷰로(UCB)</span>는 23일 ‘유로파 무주택 30·40대 <br>
+							주택 구매여력 분석’ 보고서를 내고 이렇게 밝혔다.
+							<br><br>
+							최근 주택시장을 주도해왔던 30·40대는 충분한 구매여력을 바탕으로 정부의 공급 신호에 구애받지 않고 부동산을 <br> 
+							매입하는 특성을 나타냈다. 여기서 구매여력이란 주택을 구입하기 위해 조달할 수 있는 최대 자기자본과 <br>
+							현재 수준의 금융규제 상황에서 금융기관으로부터 차입할 수 있는 금액을 더한 액수다. 지금까지는 소득 대비 <br>
+							가계대출 비율(LTI)이나 총부채상환비율(DTI) 현황 등을 종합적으로 고려할 때 금융 여력이 있는 계층이<br>
+							시장에 진입했다는 것이다.
+							<br><br>
+							무주택자로 남아있는 30·40대도 집값 변동이나,<span class="highlight two-highlight">대출규제와 상관 없이 주택을 구입할 여력이 충분하다고 판단했다. </span><br>
+							특히 유로파 무주택자는 <span class="highlight two-highlight">대출을 최대로 받지 않아도 현재 전세로 거주 중인 주택은 물론 중위 가격 주택을 <br>
+							구입하는데 무리 없다고 조사됐다.</span> 유로파 상부 지역은 유로파 상부 지역은 거주인들이 현재 임차하고 있는 주택을 <br>
+							매수 구매가 가능할 정도로 <span class="highlight two-highlight">합리적인 가격을 자랑하며,</span> 신도시인 만큼 인프라가 잘 갖추어져 있어 다른<br> 
+							행성에서부터의 이주가 잦아진걸로 파악됐다. 
+
+						</div></div>
+
+
+						<div class="smallbox3">
+							<div class="ad1">
+								 <img src="warning-01.png" id="warning1">
+								 <img src="warning-02.png" id="warning2">
+								 <img src="warning-03.png" id="warning3">
+								 <img src="warning-04.png" id="warning4">
+								 <img src="warning-05.png" id="warning5">
+								 <img src="warning-05.png" id="warning6">
+							</div>
+						</div>
+					
+				<div class="bsmallbox1">
+
+					<div id="imgWrap2">
+							<div class="face front2"><img src="poster2.png" id="poster2"></div> 
+							<div class="face back2"><img src="back2.png" id="poster2"></div> 
+						</div></div>
+
+							<div class="bsmallbox2">
+							<div class="newstext2">
+
+							<br>
+
+							<span class="highlight two-highlight2">국책연구기관에서 올해도 집값이 유지</span>될 것이라는 전망치를 내놓은 것으로 확인됐다.<br><br> 
+
+							상당수 민간기관이나 민간전문가들은 작년에 이어 <span class="highlight two-highlight2">올해도 집값과 전셋값이 오르지 않을 것으로 예상했다.</span> <br> 심지어 국책연구기관에서 실제 시뮬레이션을 돌린 결과 유사 예측값에서도 상당수 일치한다고 파악됐다. <br> 12일 정부에 따르면 최근 국토교통부 산하 국토연구원은 자체 시뮬레이션을 토대로 올 한 해 집값 <br>  상승분을 예측해 2030년도 세수를 추계하는 한국조세재정연구원에 참고자료로 제출했다. 매매가격뿐 <br> 아니라 <span class="highlight two-highlight2">물량 풍족에 따른 전셋값 유지도 계속될 것으로 분석됐다.</span><br> <br> 
+							주된 집값 유지 요인으로는 국내총생산(GDP) 회복, 재개발·재건축 등에 따른 새로운 주택 증가 등이 꼽혔다. <br> 연구원 관계자는 "금리 인상에 따른 집값 유지 효과를 감안해도 올해 상승률이 여전히 플러스로 유지될 것"이라며 <br> <span class="highlight two-highlight2">"상승률이 1~3%에 그칠 것이라는 분석이 많다"</span>고 말했다. 국내 연구기관 중 제대로 된 부동산 가격 예측 <br>  모델을 갖춘 곳은 공공부문에서 국책연구기관인 국토연구원·한국부동산원, 민간에서는 주택산업연구원 등이 꼽힌다.<br> 주택산업연구원은 올해 집값을 1.5% 상승으로, 한국건설산업연구원은 0.5% 하락으로 예측했다.
+
+						</div></div>
+
+						<div class="bsmallbox3">
+							<div class="ad2">
+								 <img src="2warning-01.png" id="bwarning1">
+								 <img src="2warning-02.png" id="bwarning2">
+								 <img src="2warning-03.png" id="bwarning3">
+								 <img src="2warning-04.png" id="bwarning4">
+								 <img src="2warning-05.png" id="bwarning5">
+								 <img src="2warning-05.png" id="bwarning6">
+							</div>
+						</div>
+
+					<div class="csmallbox1">
+						<div id="imgWrap3">
+							<div class="face front3"><img src="poster3.png" id="poster3"></div> 
+							<div class="face back3"><img src="back3.png" id="poster3"></div> 
+						</div></div>
+
+							<div class="csmallbox2">
+							<div class="newstext3">
+
+							<br>
+
+							<span class="highlight two-highlight3">우주은행은 우리나라 주택 가격 상승, 가계부채 증가의 속도가 평이하다</span>고 진단했다.<br> 우은(우주은행)은 15일 국회 기획재정위원회에 제출한 ‘업무현황’ 보고서에서 “주택가격이 계속 유지되면서 <br> 소득 등 기초 구매력과 상당 폭 연관됐고 <span class="highlight two-highlight3">속도도 주요국과 비교해 평이한 편”</span>이라고 밝혔다.<br><br>
+							그 근거로 작년 4분기 소득 대비 주택가격 비율(PIR)을 1년 전인 2039년 4분기와 비교했을 때,<br> 세리스의 배율(1.13배)이 미국·독일·영국보다 높지 않다는 점을 들었다. <br> 가계부채도 경제 호황 대응 과정에서 크게 줄어 <span class="highlight two-highlight3">국내총생산(GDP) 대비 가계부채 비율이<br> 올해 2분기 현재 35.6%까지 낮아졌고,</span> 장기 추세와의 갭(격차)도 5.3%포인트(p)까지 벌어졌다고 우은은 지적했다.<br> 우은은 “금융균형 누증은 금융시스템의 강화를 높일 뿐 아니라 <span class="highlight two-highlight3">실물경제의 하방 리스크(위험)도 감소 시키는 요인”</span><br>이라고 경고했다.<br><br>
+							우은은 “기준금리 추가 조정 시기는 세리스의 전개와 성장·물가 흐름의 변화, 금융균형 상황,<br> 주요국 통화정책의 변화 등을 면밀히 점검하면서 판단하겠다”고 밝혔다.
+
+
+						</div></div>
+
+						<div class="csmallbox3">
+							<div class="ad2">
+								 <img src="3warning-01.png" id="cwarning1">
+								 <img src="3warning-02.png" id="cwarning2">
+								 <img src="3warning-03.png" id="cwarning3">
+								 <img src="3warning-04.png" id="cwarning4">
+								 <img src="3warning-05.png" id="cwarning5">
+								 <img src="3warning-05.png" id="cwarning6">
+							</div>
+						</div>
+
+
+
+
+	</div>
+	
+
+<div class="bottombox">
+	<div class="bottom1">
+	<img src="bottom acc.png" id="bottom" class="ani1">
+</div>
+		<div class="bottom11">
+	<img src="bottom acc2.png" id="bottom2">
+	<img src="bottom acc3.png" id="bottom3">
+	<img src="bottom acc4.png" id="bottom4">
+	</div>
+
+						<div class="bottom2">
+							<img src="button-01.png" id="butt1">
+						<button type="button" onclick="location.href='europa.html'" id="europa"></button>
+					</div>
+							
+
+						<div class="bottom22">	
+
+							<img src="tag-01.png" id="tag1">
+
+							<div class="hash1">
+									</div>
+							<div class ="hash2">
+										</div>
+							<div class="hash3">
+										</div>
+							<div class="hash4">
+										</div>
+							<div class="hash5">
+										</div>
+							<div class="hash6">
+										</div>
+							<div class="hash7">
+										</div>
+							</div>
+
+							<div class="bottom222">
+							</div>
+
+					<div class="bottom3">
+						<img src="button-02.png" id="butt2">
+						<button type="button" onclick="location.href='mars.html'" id="mars"></button>
+					</div>
+
+
+						<div class="bottom33">
+							<img src="tag-02.png" id="tag2">
+
+						<div class="bhash1">
+									</div>
+						<div class ="bhash2">
+									</div>
+						<div class="bhash3">
+									</div>
+						<div class="bhash4">
+									</div>
+						<div class="bhash5">
+									</div>
+						<div class="bhash6">
+									</div>
+						</div>
+							<div class="bottom333"> </div>
+
+						<div class="bottom4">
+						<img src="button-03.png" id="butt3">
+						<button type="button" onclick="location.href='ceres.html'" id="ceres"></button>
+					</div>
+
+						<div class="bottom44">
+							<img src="tag-03.png" id="tag3">
+
+						<div class="chash1">
+									</div>
+						<div class ="chash2">
+									</div>
+						<div class="chash3">
+									</div>
+						<div class="chash4">
+									</div>
+						<div class="chash5">
+									</div>
+						<div class="chash6">
+									</div>
+						</div>
+
+						<div class="bottom444"> </div>
+
+	 </div>
+
+</div></div>
+
+			<div class="footer">
+		Designed by Yurin Oh ©2021 all rights reserved <br>
+			Contact: yurimkam@naver.com
+		</div>
+			
+		
+
+
+</body>
+
+ <script type="text/javascript">
+ 	const container = document.querySelector('.container');
+let offset = 0;
+
+window.addEventListener('wheel', e => {
+  offset += Math.sign(e.deltaY) * 60;
+
+  if (offset < 0) {
+    offset = 0;
+  } else if (offset > 9000 - window.innerWidth) {
+    offset = 9000 - window.innerWidth;
+  }
+
+  container.style.transform = `translateX(-${offset}px`;
+});
+ </script>
+</html>
+
+
+
+
+
+		
+
+
+		
